@@ -39,7 +39,18 @@ public class Demo
 		//Character.isDigit(char c) and/or Character.isLetter(char c) and/or Integer.toHexString(int n) may help
 		//don't worry about uppercase
 
-		//...
+		 String newstr = "";
+			for (int i = 0; i<str.length(); i++){
+			    if (Character.isLetter(str.charAt(i))){
+				int dec = (int) str.charAt(i); 
+				dec -= 96;
+				newstr += Integer.toHexString(dec);
+			    }
+			    else if (Character.isDigit(str.charAt(i))){
+				newstr += str.charAt(i);
+			    }
+			}
+			return newstr;
 
 	}
 
